@@ -1,0 +1,26 @@
+#!/bin/bash
+
+
+COLOR_NONE="\x1B[m"
+COLOR_GRAY="\x1B[0;30m"
+COLOR_RED="\x1B[0;31m"
+COLOR_GREEN="\x1B[0;32m"
+COLOR_YELLOW="\x1B[0;33m"
+COLOR_BLUE="\x1B[0;34m"
+COLOR_PURPLE="\x1B[0;35m"
+COLOR_CYAN="\x1B[0;36m"
+COLOR_WHITE="\x1B[0;37m"
+
+MAIN_PATH=`pwd`
+TAR_DATA=$MAIN_PATH/lua/core/data.tar.gz
+
+APP_HOME_PATH=$MAIN_PATH/lua/$1
+LUA_DATA_PATH=$MAIN_PATH/lua/$1/data
+
+if [ ! -d "$LUA_DATA_PATH" ]; then
+	echo -e $COLOR_CYAN$1"/data "$COLOR_RED"✖"$COLOR_NONE
+	tar -xzvf $TAR_DATA -C $APP_HOME_PATH
+	echo -e $COLOR_GREEN"※"$COLOR_PURPLE $LUA_DATA_PATH $COLOR_GREEN"※"$COLOR_RED"\n-->create!"$COLOR_NONE
+	echo -e $COLOR_CYAN$1"/data "$COLOR_GREEN"✔"$COLOR_NONE
+	echo -e $COLOR_YELLOW"please "$COLOR_CYAN"♥"$COLOR_WHITE make load MMR=$1 $COLOR_CYAN"♥"$COLOR_YELLOW" later!\n"$COLOR_NONE
+fi 

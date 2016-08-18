@@ -1,0 +1,25 @@
+{
+	"smart_port": 4140,
+	"hander_counts": 1,
+	"smart_worker_counts": 1,
+	"smart_protocol": "http",
+	"tasker_counts": 32,
+	"monitor_times": 30,
+	
+	"swift_port": 4071,
+	"swift_worker_counts": 1,
+	"swift_protocol": "http",
+	
+	"sniff_worker_counts": 20,
+	"sharer_counts": 64,
+
+	"max_req_size": 32768,
+
+	"log_path": "./logs/",
+	"log_file": "rta",
+	"log_level": 5,
+
+	"api_apply": "/publicentry",
+	"api_fetch": "/rtaFetch.json",
+	"api_merge": "/rtaMerge.json"
+}

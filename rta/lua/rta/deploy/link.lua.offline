@@ -1,0 +1,44 @@
+module("link")
+
+OWN_POOL = {
+	redis = {
+		public = {
+			host = '127.0.0.1',
+			port = 5080,
+		},
+		owner = {
+			host = '127.0.0.1',
+			port = 5080,
+		},
+		RTmiles = {
+			host = '127.0.0.1',
+			port = 5080,
+		},
+		RTtrack = {
+			hash='customer',
+			{'M','rttrack1', '127.0.0.1', 5080, 30},
+		},
+		RTA = {
+			host = '127.0.0.1',
+			port = 5080,
+		},
+	},
+	tcp = {
+		tcp1 ={
+			host = "127.0.0.1",
+			port = 4140,
+		}
+
+	},
+
+}
+
+OWN_DIED = {
+	http = {
+
+		----测试服务器URI(转发多台)
+		['publicentry'] = { 
+		},
+
+	},
+}
